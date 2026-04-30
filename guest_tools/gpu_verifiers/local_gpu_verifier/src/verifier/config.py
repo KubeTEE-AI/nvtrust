@@ -66,8 +66,8 @@ class BaseSettings:
     # The maximum number of times the CC ADMIN will retry the GPU attestation.
     MAX_RETRY_COUNT = 3
     current_retry_count = 0
-    # The Timeout duration in seconds.
-    MAX_NVML_TIME_DELAY = 5
+    # The maximum time in seconds to wait for an NVML call before timing out.
+    MAX_NVML_TIME_DELAY = 30
     MAX_OCSP_TIME_DELAY = 10
     MAX_NETWORK_TIME_DELAY = 10
     OCSP_URL = os.getenv('NV_OCSP_URL', 'https://ocsp.ndis.nvidia.com/')

@@ -46,8 +46,8 @@ class BaseSettings:
     SIZE_OF_NONCE_IN_HEX_STR = 64
     attestation_report_availability = False
     NONCE = "4cff7f5380ead8fad8ec2c531c110aca4302a88f603792801a8ca29ee151af2e"
-    # The Timeout duration in seconds.
-    MAX_NVML_TIME_DELAY = 5
+    # The maximum time in seconds to wait for an NVML call before timing out.
+    MAX_NVML_TIME_DELAY = 30
     MAX_OCSP_TIME_DELAY = 10
     MAX_NETWORK_TIME_DELAY = 10
     OCSP_URL = ''
