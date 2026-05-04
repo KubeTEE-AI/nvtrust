@@ -16,7 +16,7 @@ DEFAULT_TRUST_OUTPOST_OCSP_URL = "https://ocsp.ndis.nvidia.com"
 def pytest_addoption(parser):
     parser.addoption("--nras-gpu-url", action="store", default=DEFAULT_NRAS_GPU_URL,
                     help="NRAS URL for GPU attestation (default: %(default)s)")
-    parser.addoption("--nras-switch-url", action="store", default=DEFAULT_NRAS_GPU_URL,
+    parser.addoption("--nras-switch-url", action="store", default=DEFAULT_NRAS_SWITCH_URL,
                     help="NRAS URL for Switch attestation (default: %(default)s)")
     parser.addoption("--rim-url", action="store", default=DEFAULT_RIM_SERVICE_URL,
                     help="RIM URL for attestation (default: %(default)s)")
