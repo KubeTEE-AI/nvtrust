@@ -32,12 +32,12 @@ def test_fail_gpu_attestation_with_invalid_service_key(rim_url, ocsp_url):
 @pytest.mark.gpu_hardware
 @pytest.mark.user_mode
 def test_fail_gpu_attestation_with_invalid_RIM_url(ocsp_url):
-    invoke_attestation(None, "http://invalid-rim-url.com", ocsp_url, return_code=1)
+    invoke_attestation(None, "http://invalid-rim-url.com", ocsp_url, is_user_mode=True, return_code=1)
 
 @pytest.mark.gpu_hardware
 @pytest.mark.user_mode
 def test_fail_gpu_attestation_with_invalid_claims_version(rim_url, ocsp_url):
-    invoke_attestation(None, rim_url, ocsp_url, claims_version="INVALID_CLAIMS_VERSION", return_code=2)
+    invoke_attestation(None, rim_url, ocsp_url, claims_version="INVALID_CLAIMS_VERSION", is_user_mode=True, return_code=2)
 
 def invoke_attestation(service_key, rim_url, ocsp_url, is_user_mode=False, claims_version="2.0", return_code=0):
     command = [
